@@ -1,0 +1,12 @@
+{
+  "users": [
+    {
+      "email": "mohamedbenmohamed@gmail.com",
+      "password": "$2a$10$sFXwIcQc2tq3vWF/Bg53ve26Z7I9iJX/3wGUdnBlGiq/3xTy2PWw2",
+      "name": "mohamed",
+      "username": "benmohamed",
+      "role": "ROLE_ADMIN",
+      "id": 1
+    }
+  ]
+}
