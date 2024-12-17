@@ -9,12 +9,8 @@ import {RoleGuard} from "./role-guard.guard";
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' }, // Redirect the root path to 'login'n
   {path: 'login', component: LoginComponent,},
-  { path: 'dashboard', component: DashboardComponent, canActivate:
-      [AuthentificationGuard]},
-  {
-    path: 'dashboard', component: DashboardComponent, canActivate:
-      [AuthentificationGuard,RoleGuard]
-  }
+  { path: 'dashboard', component: DashboardComponent, canActivate: [AuthentificationGuard, RoleGuard] }
+
 
 ]
 

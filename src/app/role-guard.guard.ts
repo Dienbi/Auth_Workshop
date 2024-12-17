@@ -7,19 +7,18 @@ import { AthentificationService } from './athentification.service';
   providedIn: 'root'
 })
 export class RoleGuard implements CanActivate {
-  constructor(private authService: AthentificationService, private router: Router) {}
-
+  constructor(
+    private authService: AthentificationService,
+    private router: Router
+  ) {}
   canActivate(
     route: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot
-  ): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
+    state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean
+    | UrlTree> | boolean | UrlTree {
     if (this.authService.getRole('ROLE_ADMIN')) {
-      // Allow access for admin users
-      return true;
+      return true
     }
-    // Logout and redirect non-admin users
-    //this.authService.logOut();
-    //this.router.navigate(['/login']);
+    this.router.navigate(['/login']);
     return false;
   }
 }
